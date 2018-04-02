@@ -62,6 +62,7 @@ const allRules = {
   'no-this-in-sfc': require('./lib/rules/no-this-in-sfc'),
   'no-typos': require('./lib/rules/no-typos'),
   'no-unescaped-entities': require('./lib/rules/no-unescaped-entities'),
+  'no-unknown-html-element': require('./lib/rules/no-unknown-html-element'),
   'no-unknown-property': require('./lib/rules/no-unknown-property'),
   'no-unused-prop-types': require('./lib/rules/no-unused-prop-types'),
   'no-unused-state': require('./lib/rules/no-unused-state'),
@@ -77,7 +78,6 @@ const allRules = {
   'sort-comp': require('./lib/rules/sort-comp'),
   'sort-prop-types': require('./lib/rules/sort-prop-types'),
   'style-prop-object': require('./lib/rules/style-prop-object'),
-  'no-unknown-html-element': require('./lib/rules/no-unknown-html-element'),
   'void-dom-elements-no-children': require('./lib/rules/void-dom-elements-no-children')
 };
 
