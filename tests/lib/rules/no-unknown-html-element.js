@@ -36,13 +36,19 @@ ruleTester.run('no-unknown-html-element', rule, {
       code: '<div>Foo</div>;'
     },
     {
-      code: 'React.createElement("div", {}, "Foo");'
+      code: '<my-web-component />'
     },
     {
       code: `
         const Component = () => null;
         <Component />;
       `
+    },
+    {
+      code: 'React.createElement("div", {}, "Foo");'
+    },
+    {
+      code: 'React.createElement("my-web-component");'
     },
     {
       code: `
