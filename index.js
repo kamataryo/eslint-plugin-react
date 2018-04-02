@@ -77,7 +77,7 @@ const allRules = {
   'sort-comp': require('./lib/rules/sort-comp'),
   'sort-prop-types': require('./lib/rules/sort-prop-types'),
   'style-prop-object': require('./lib/rules/style-prop-object'),
-  'valid-dom-element-names': require('./lib/rules/valid-dom-element-names'),
+  'no-unknown-html-element': require('./lib/rules/no-unknown-html-element'),
   'void-dom-elements-no-children': require('./lib/rules/void-dom-elements-no-children')
 };
 

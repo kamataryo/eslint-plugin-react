@@ -1,5 +1,5 @@
 /**
- * @fileoverview Tests for valid-dom-element-names
+ * @fileoverview Tests for no-unknown-html-element
  * @author Kamata, Ryo
  */
 
@@ -9,7 +9,7 @@
 // Requirements
 // -----------------------------------------------------------------------------
 
-const rule = require('../../../lib/rules/valid-dom-element-names');
+const rule = require('../../../lib/rules/no-unknown-html-element');
 const RuleTester = require('eslint').RuleTester;
 
 const parserOptions = {
@@ -30,7 +30,7 @@ function errorMessage(elementName) {
 // -----------------------------------------------------------------------------
 
 const ruleTester = new RuleTester({parserOptions});
-ruleTester.run('valid-dom-element-names', rule, {
+ruleTester.run('no-unknown-html-element', rule, {
   valid: [
     {
       code: '<div>Foo</div>;'
