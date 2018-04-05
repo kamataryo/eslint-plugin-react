@@ -21,9 +21,7 @@ const parserOptions = {
   }
 };
 
-function errorMessage(elementName) {
-  return `Invalid DOM element <${elementName} /> cannot be used.`;
-}
+const errorMessage = elementName => `unknown element name <%${elementName}> is used.`;
 
 // -----------------------------------------------------------------------------
 // Tests
@@ -36,9 +34,6 @@ ruleTester.run('no-unknown-html-element', rule, {
       code: '<div>Foo</div>;'
     },
     {
-      code: '<my-web-component />'
-    },
-    {
       code: `
         const Component = () => null;
         <Component />;
@@ -46,9 +41,6 @@ ruleTester.run('no-unknown-html-element', rule, {
     },
     {
       code: 'React.createElement("div", {}, "Foo");'
-    },
-    {
-      code: 'React.createElement("my-web-component");'
     },
     {
       code: `
